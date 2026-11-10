@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 import { Suspense } from "react";
 import SuspenseLoader from "@/components/ui/suspense-loader";
+import Gallery from "@/components/projects/Gallery";
 
 async function ProjectContent({
   params,
@@ -151,39 +152,7 @@ async function ProjectContent({
       </section>
 
       {/* Gallery */}
-      <section className="mx-auto max-w-[1440px] px-5 py-24 md:px-8 md:py-36">
-        <div className="mb-12 flex items-end justify-between">
-          <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-[#F59E0B]">
-              Project Gallery
-            </p>
-
-            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] md:text-6xl">
-              Inside the
-              <br />
-              <span className="text-white/20">project.</span>
-            </h2>
-          </div>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2">
-          {project.gallery.map((image, index) => (
-            <div
-              key={index}
-              className={`relative overflow-hidden border border-white/10 ${
-                index === 0 ? "aspect-[16/10] md:col-span-2" : "aspect-[4/3]"
-              }`}
-            >
-              <Image
-                src={image}
-                alt={`${project.title} ${index + 1}`}
-                fill
-                className="object-cover transition-transform duration-700 hover:scale-105"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
+      <Gallery project={project}/>
 
       {/* Bottom CTA */}
       <section className="engineering-grid border-t border-white/10 py-32">
@@ -215,7 +184,7 @@ export default function ProjectPage({
 }) {
   return (
     <Suspense fallback={<SuspenseLoader />}>
-      <ProjectContent params={params}/>
+      <ProjectContent params={params} />
     </Suspense>
   );
 }
