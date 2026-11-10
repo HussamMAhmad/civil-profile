@@ -18,7 +18,7 @@ export type Project = {
   solution: string;
   image: StaticImageData;
   gallery: StaticImageData[];
-    tags: string[];
+  tags: string[];
 };
 
 export const projects: Project[] = [
@@ -44,7 +44,7 @@ export const projects: Project[] = [
 
     image: images.project1,
 
-    gallery: [images.project1, images.project12, images.project13],
+    gallery: [images.project1, images.project12],
 
     tags: ["Revit", "BIM", "Architecture"],
   },

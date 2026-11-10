@@ -18,13 +18,60 @@ export const metadata: Metadata = {
   description:
     "Nbras Ahmad — Civil Engineer specializing in structural engineering, construction management and infrastructure.",
   keywords: [
-    "Nbras Ahmad",
+    "Nebras Ahmad",
+    "Nebras",
     "Civil Engineer",
     "Structural Engineer",
-    "Construction",
+    "Construction Engineer",
+    "Structural Engineering",
+    "Construction Management",
+    "BIM",
+    "Revit",
+    "ETABS",
     "Infrastructure",
     "Engineering Portfolio",
+    "Civil Engineering Portfolio",
   ],
+  authors: [
+    {
+      name: "Nebras Ahmad",
+    },
+  ],
+  creator: "Nebras Ahmad",
+
+  openGraph: {
+    title: "Nebras Ahmad — Civil Engineer",
+
+    description:
+      "Civil Engineer specializing in structural engineering, construction, BIM, Revit and technical design.",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nebras Ahmad — Civil Engineer",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Nebras Ahmad — Civil Engineer",
+
+    description:
+      "Civil Engineer specializing in structural engineering, construction, BIM, Revit and technical design.",
+
+    images: ["/og-image.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -34,8 +81,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-              <Navbar />
-        {children}</body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
