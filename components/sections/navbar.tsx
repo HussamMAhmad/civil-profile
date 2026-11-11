@@ -20,6 +20,10 @@ const navigation = [
     label: "Experience",
     href: "#experience",
   },
+  {
+    label: "let's Talk",
+    href: "/#contact",
+  },
 ];
 
 export default function Navbar() {
@@ -177,31 +181,6 @@ export default function Navbar() {
                         </Link>
                       </motion.div>
                     ))}
-
-                    {/* Let's Talk */}
-
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        delay: 0.25,
-                        duration: 0.3,
-                      }}
-                      className="pt-4"
-                    >
-                      <Link
-                        href="/#contact"
-                        onClick={closeMenu}
-                        className="group flex w-full items-center justify-between border border-[#F59E0B]/40 px-5 py-4 transition duration-300 hover:bg-[#F59E0B] hover:text-[#0B0D0E]"
-                      >
-                        <span className="text-sm">Let's Talk</span>
-
-                        <ArrowUpRight
-                          size={18}
-                          className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
-                        />
-                      </Link>
-                    </motion.div>
                   </div>
 
                   {/* Technical Footer */}

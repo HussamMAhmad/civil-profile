@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: "https://nebras-se.vercel.app",
   title: "Nbras Ahmad — Civil Engineer",
   description:
     "Nbras Ahmad — Civil Engineer specializing in structural engineering, construction management and infrastructure.",
